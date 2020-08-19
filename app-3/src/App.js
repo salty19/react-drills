@@ -7,27 +7,30 @@ constructor(){
   super()
 
   this.state = {
-    userInput: '',
-    foodList: ['spaghetti', 'ice cream', 'sushi', 'bologna', 'cheese']
+    filterInput: '',
+    foodList: ['spaghetti', 'ice cream', 'sushi', 'bologna', 'cheese'],
   }
 }
 
-handleChange(val) {
-  this.setState({userInput: val})
+handleChange(filter) {
+  this.setState({filterInput: filter})
 }
 
+
 render(){
-  let foodsToDisplay = this.state.foodList.map( (element, index) => {
-    return <h2 key={index}>{element}</h2>
-  })
+  let foodsToDisplay = this.state.foodList
+    .filter((element, index) => {
+      return element.includes(this.state.filterInput)
+    })
+  
+    .map( (element, index) => {
+      return <h2 key={index}>{element}</h2>
+    })
 
   return (
-  <div>
-    <input className="userInput" onChange={ (e) => this.handleChange (e.target.value)} />
-    <span className="results">{this.state.userInput}</span>
-    <p className="App">{foodsToDisplay}</p>
-    <p> FilterObject Comp </p>
-  </div>
+    <div>
+      <input onChange={ (e) => this.handleChange (e.target.value)} type="{foodsToDisplay}" />
+    </div>
   )
 }
 
