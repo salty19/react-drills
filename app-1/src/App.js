@@ -12,15 +12,17 @@ class App extends Component {
     }
   }
 
-  handlechange(val) {
+  handleChange(val) {
     this.setState({ userInput: val})
   }
+
+
 
   render(){
     return (
       <div>
         <input className="userInput" onChange={ (e) => this.handleChange (e.target.value) } />
-        <span className="results"></span>
+        <span className="results">{this.state.userInput}</span>
       </div>
     )
   }
