@@ -29,7 +29,8 @@ render(){
 
   return (
     <div>
-      <input onChange={ (e) => this.handleChange (e.target.value)} type="{foodsToDisplay}" />
+      <input onChange={ (e) => this.handleChange (e.target.value)} type="text" />
+      {foodsToDisplay}
     </div>
   )
 }
