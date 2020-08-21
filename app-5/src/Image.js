@@ -1,4 +1,4 @@
-import React, {Component} from 'react'App.css
+import React, {Component} from 'react'
 
 class Image extends Component {
 
@@ -12,4 +12,4 @@ class Image extends Component {
     }
 }
 
-default export Image 
+export default Image 
