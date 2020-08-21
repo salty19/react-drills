@@ -1,10 +1,11 @@
 import React, { Component } from 'react' 
-import App from './App' 
 
-class Todo from Component {
+
+class Todo extends Component {
     
-    CanvasRenderingContext2D() {
+    render() {
     return <p> {this.props.task} </p>
     }
-    
-export default Todo 
+}
+
+export default Todo
