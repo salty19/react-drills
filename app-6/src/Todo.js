@@ -3,15 +3,8 @@ import App from './App'
 
 class Todo from Component {
     
-    constructor() {
-        super()
-
-        
+    CanvasRenderingContext2D() {
+    return <p> {this.props.task} </p>
     }
-
-
-    render() {
-
-    }
-    }
+    
 export default Todo 

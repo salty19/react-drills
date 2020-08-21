@@ -15,17 +15,27 @@ class App extends Component {
 
 }
 
+handleInputchange(value) {
+  this.setState({ input: value })
+}
+
+handleAddTask() {
+  this.setState({
+    list: [...this.state.list, this.state.input],
+    input: '',
+  })
+}
 
 render() {
   let list = this.state.list.map((element, index) => {
     return <Todo key={index} task={element} />
   })
     return (
-        <div>
-            <h1></h1>
+        <div className='App'>
+            <h1> My to-do list: </h1>
             <div>
-                <input />
-                <button></button>
+                <input placeholder='Enter new task' value ={this.state.input} onChange={e => this.handleInputChange(e.target.value)}/>
+                <button onClick={this.handleAddTask}> Add </button>
             </div>
 
             <br />
