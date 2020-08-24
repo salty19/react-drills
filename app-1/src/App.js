@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react' 
+import './App.css' 
 
 class App extends Component {
-  
   constructor() {
     super()
 
     this.state = {
-      userInput: ''
+      message: '' 
     }
   }
 
-  handleChange(val) {
-    this.setState({ userInput: val})
+  handleChange(value) {
+    this.setState({ message: value })
   }
 
+  render() {
+    return(
 
+      <div className='App'>
 
-  render(){
-    return (
-      <div>
-        <input className="userInput" onChange={ (e) => this.handleChange (e.target.value) } />
-        <span className="results">{this.state.userInput}</span>
+        <input onChange={e => this.handleChange(e.target.value)} />
+        <p>{this.state.message}</p>
+      
       </div>
+
     )
   }
 }
 
-export default App;
+export default App 
