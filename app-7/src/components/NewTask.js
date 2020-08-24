@@ -1,6 +1,6 @@
 import React, {Component} from 'react' 
 
-class NewTask extends Components {
+class NewTask extends Component {
     constructor() {
         super()
 
