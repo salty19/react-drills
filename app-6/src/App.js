@@ -13,10 +13,11 @@ class App extends Component {
         input: '',
     }
 
+    this.handleAddTask = this.handleAddTask.bind(this)
 
 }
 
-handleInputchange(value) {
+handleInputChange(value) {
   this.setState({ input: value })
 }
 
